@@ -1,0 +1,395 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap4.css">
+		<link rel="stylesheet" href="css/skm.css">
+		<link rel="stylesheet" href="css/aos.css">
+		<link href="css/hover.css" rel="stylesheet">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<title>SKM & ASSOCIATES</title>
+	<style>
+			html {
+			  scroll-behavior: smooth;
+			}
+		</style>
+	</head>
+	<script>
+	$(document).ready(function() {
+		var toggleAffix = function(affixElement, scrollElement, wrapper) {
+	  
+		var height = affixElement.outerHeight(),
+			top = wrapper.offset().top;
+		
+		if (scrollElement.scrollTop() >= top){
+			wrapper.height(height);
+			affixElement.addClass("affix");
+		}
+		else {
+			affixElement.removeClass("affix");
+			wrapper.height('auto');
+		}
+		  
+		};
+	  
+
+		$('[data-toggle="affix"]').each(function() {
+		var ele = $(this),
+			wrapper = $('<div></div>');
+		
+		ele.before(wrapper);
+		$(window).on('scroll resize', function() {
+			toggleAffix(ele, $(this), wrapper);
+		});
+		
+		// init
+		toggleAffix(ele, $(window), wrapper);
+		});
+  
+	});
+	/*========================================================== 
+		 ANIMATIONS WITH WATPOINTS 
+		 ========================================================== */
+		$('.animated-row').each(function(){
+			var $this = $(this);
+			$this.find('.animate').each(function(i){
+				var $item = $(this);
+				var animation = $item.data('animate');
+				$item.waypoint(function(){
+						setTimeout(function () {
+								$item.addClass('animated '+animation).removeClass('animate');
+						}, i*150);
+				},
+				{
+						offset: '100%',
+						triggerOnce: true
+				});
+			});
+		});
+		
+</script>
+	<body id="myPage">
+		<!--topbar-->
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-sm-6 col-5 phn">
+					 <p><i class="fa fa-phone"></i> +91-8860608212</p>
+					</div>
+					<div class="col-lg-4 col-sm-6 col-7 mail">
+					  <p><i class="fa fa-envelope-o"></i> samtaksimmy@gmail.com</p>
+					</div>
+					<div class="col-lg-4 d-none d-lg-block facon">
+						<span>
+							<a href="http://www.facebook.com" target="_blank" title="facebook" class="hvr-icon-buzz-out"><i class="fa fa-facebook-square hvr-icon"></i></a>
+							<a href="http://www.twitter.com" title="twitter" target="_blank" class="hvr-icon-buzz-out"><i class="fa fa-twitter hvr-icon"></i></a>
+							<a href="http://www.linkedin.com" target="_blank" title="linkedin" class="hvr-icon-buzz-out"><i class="fa fa-linkedin hvr-icon"></i></a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--topbar/-->
+		<!--<div class="d-none d-lg-block" style="height:50px;"></div>-->
+		<!--navbar-->
+		<div class="container-fluid bg-head header-top d-md-block" data-toggle="affix">
+			<div class="container">
+				<nav class="navbar navbar-expand-lg navbar-light py-0">
+				  <a class="navbar-brand logo" href="index.html">
+					<img src="images/logo.png" class="img-fluid hvr-shadow">
+				  </a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto text-light">
+					  <li class="nav-item active">
+						<a class="nav-link" href="index.html">HOME</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="skm_about.html">ABOUT US</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="skm_aboutfounder.html">ABOUT FOUNDER</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle"  href="secretarial_compliances.html">AREAS OF PRACTICE</a>
+						<ul class="dropdown-content">
+						  <li><a href="secretarial_compliances.html">SECRETARIAL COMPLIANCES</a></li>
+						  <li><a href="fema_compliances.html">FEMA RELATED COMPLIANCES</a></li>
+						  <li><a href="appearance_liasioning.html">APPEARANCES & LIASIONING</a></li>
+						  <li><a href="legal.html">LEGAL</a></li>
+						  <li><a href="other_registration.html">OTHER REGISTRATION</a></li>
+						  <li><a href="financial_resource.html">RAISING OF FINANCIAL RESOURCES</a></li>
+						  <li><a href="project_planning.html">PROJECT PLANNING & IMPLEMENTATION</a></li>
+						  <li><a href="corporate.html">CORPORATE TRAINING SESSIONS AND GUEST LECTURE</a></li>
+						</ul>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="skm_contact.html">CONTACT US</a>
+					  </li>
+					</ul>
+				  </div>
+				</nav>
+			</div>
+		</div>
+		<!--navbar/-->
+		<!--imgcontainer-->
+		<!--<div class="d-block d-sm-none">
+			<img src="images/omg6above.png" class="img-fluid" style="display:block;">
+		</div>-->
+		<div class="main-image">
+			<!--<img src="images/omg1.png" class="img-fluid" style="display:block;" >-->
+			<img src="images/omg6a.png" class="img-fluid" style="display:block;" >
+		</div>
+		<!--imgcontainer/-->
+		<!--main-container-->
+		<div class="container-fluid welcome">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h3 class="">Welcome To SKM & Associates</h3>
+					<img src="images/b1thina.png" class="img-fluid" style="vertical-align:top;">
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid welcometext">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p><strong style="color:#002c6d;">"Samta K Simmy & Associates"</strong> Practicing Company Secretaries* Firm is a new startup idea by CS Samta Kumari
+						Simmy & Team with the purpose of<strong> providing secretarial and legal services to corporate sector</strong>
+						starting from new startups and extending further to all existing business entities. The firm was
+						conceptualized with the idea of looking at all corporate transactions and compliances in a different facet,
+						in a manner that the approach always keeps both law makers and corporates at win-win situation. </p>
+						<p>With our rich and diverse experience in the field of corporate compliances, we place ourselves in the
+						market as a leading and iconic company secretary firm providing holistic services in the field of
+						Secretarial, Legal, Foreign Collaboration, Joint Ventures, Intellectual property Rights, Project Approvals
+						and Licensing, Project Financing and Liaisioning Matters.
+						</p>
+						<p><strong>Smart compliance</strong> is a need today since emergence of online compliance by various regulators like Ministry of Corporate Affairs "<a href="http://www.mca.gov.in/" target="_blank">www.mca.gov.in</a>", Securities and Exchange Board of India "<a href="https://www.sebi.gov.in/" target="_blank" style="">www.sebi.gov.in</a>", Reserve Bank of India "<a href="https://www.rbi.org.in/" target="_blank">www.rbi.org.in</a>", Income Tax Authority "<a href="https://www.incometaxindiaefiling.gov.in/home" target="_blank">www.incometaxindiaefiling.gov.in</a>" etc and other regulators including stock exchange compliances is a mandate to follow by the business entities operating in India.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 pb-4">
+						<div class="row text-center">
+							<div class="col-md-4 item">
+								<div class="initem"><i class="fa fa-rocket fa-2x"></i><h3>AIM</h3></div>
+								<p class="text-justify pt-2 pb-0 mb-0">Our<strong> Aim</strong> is to provide outstanding and dedicated services to our clients in a timely and cost efficient
+								manner. We manage their regulatory, statutory and legal compliances at an affordable</p>
+								<p id="demo1" class="collapse text-justify">
+								compliances at an affordable and convenient cost
+								for the entire financial year and provide solutions to them throughout the business lifecycle. We offer
+								services with the intent of being compliant with every legal requirement your business needs to comply
+								with, diligently and smartly.
+								</p>
+								<a href="" data-toggle="collapse" data-target="#demo1" style="float:right;">Read more...</a>
+							</div>
+							<div class="col-md-4 item"><div class="initem"><i class="fa fa-universal-access fa-2x"></i><h3>MOTTO</h3></div>
+								<p class="text-justify pt-2"><strong>Building trust & commitment at initial stage with our clients is our motto </strong>since a great business is
+								always built upon faith & trust of clients and we always try to retain their faith and trust in us.
+								</p>
+								<!--<div class="alert alert-secondary mt-3 pt-3">
+								  <h5 class="flashit">We welcome you to our network and our services!!!</h5> 
+								</div>-->
+							</div>
+							<div class="col-md-4 item"><div class="initem"><i class="fa fa-users fa-2x"></i><h3>TEAM</h3></div>
+								<p class="text-justify pt-2 pb-0 mb-0">We have a team of expert Professionals like Company Secretaries, Chartered Accountants, Advocates and
+								Financial Experts under whose guidance and framework our services are being</p>
+								<p id="demo2" class="collapse text-justify pt-0 mt-0">
+								offered. Our team &
+								experts believe in Quality of services and meeting the deadlines along with fulfilling the promises we
+								made. We believe in empowering Young Corporate Professionals by sharing Knowledge and work
+								experience we have through blogs and various Articles.<br />
+								<small class="flashit"style="text-align:left;font-weight:bold;">We welcome you to our network and our services!!!</small>
+								</p>
+								<a href="" data-toggle="collapse" data-target="#demo2" style="float:right;">Read more...</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--main-container/-->
+		<!--about-->		
+		<div class="container-fluid aboutfounder">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h4 class="pt-4">About Founder</h4>
+					</div>
+				</div>
+			</div>
+			<div class="container text-center">
+				<div class="row areatext">
+					<div class="col-md-12">
+						<p style="color:#002c6d;">The Firm was established by <strong>Mrs. Samta Kumari Simmy</strong> who is an Associate Member of the Institute of Company Secretaries of India and a Management Graduate from Institute of Management Studies, Noida having 10 years of post-qualification experience and overall 12 years of rich experience backed with strong knowledge & understanding of statutory regulations, process orientations and strong network with all functions and regulatory liasoining. She has expertise in handling Legal, Secretarial, Corporate affairs and Project Related matters for Trading, Manufacturing, Real Estate, Infrastructure, Special Economic Zones, Private Equity, Market Research and Educational Sectors etc. She is an accomplished professional with a proven ability to develop and implement real time strategies that support project implementation and execution.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--about/-->
+		<!--practice area-->		
+		<div class="container-fluid practice">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h4 class="pt-4">Our Practice Areas</h4>
+						<img src="images/b1thinb3.png" class="img-fluid" style="vertical-align:top;">
+					</div>
+				</div>
+			</div>
+			<div class="container text-center">
+				<div class="row areatext">
+					<div class="col-md-12 pt-2">
+						<p><strong style="color:#002c6d;" >Our aim</strong> is to provide outstanding and dedicated services to our clients in a timely and cost efficient
+						manner. We provide clear, feasible and practical advice with a time bound deliverables to support its
+						client business objective. </p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 rotatebox">
+						<div class="box" style="background-color:#82a8de;"><a href="secretarial_compliances.html">SECRETARIAL COMPLIANCES</a></div>
+					</div>
+					<div class="col-md-3 rotatebox">
+						<div class="box w1" style="background-color:#002c6d;"><a href="fema_compliances.html">FEMA ACT 1999 RELATED-COMPLIANCES</a></div>
+					</div>
+					<div class="col-md-3 rotatebox">
+					<div class="box" style="background-color:#a5caf1;"><a href="appearance_liasioning.html">APPEARANCES & LIASIONING
+					</a></div>
+					</div>
+					<div class="col-md-3 rotatebox">					
+						<div class="box" style="background-color:white;"><a href="legal.html">LEGAL</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-12 rotatebox">
+						<div class="box" style="background-color:white;"><a href="other_registration.html">OTHER REGISTRATION</a></div>
+					</div>
+					<div class="col-md-3 col-12 rotatebox">
+						<div class="box" style="background-color:#a5caf1;"><a href="financial_resource.html">RAISING OF FINANCIAL RESOURCES</a></div>
+					</div>
+					<div class="col-md-3 col-12 rotatebox">
+					<div class="box w1" style="background-color:#002c6d;"><a href="project_planning.html">PROJECT PLANNING &
+						IMPLEMENTATION</a></div>
+					</div>
+					<div class="col-md-3 col-12 rotatebox">					
+						<div class="box" style="background-color:#82a8de;"><a href="corporate.html">CORPORATE TRAINING SESSIONS AND GUEST LECTURE</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--practice area/-->
+		<!--footer-->
+		<div class="container-fluid footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 col-12 contctus">
+						<h6 class="pt-4">Contact Us</h6>
+						<div style="width:50px; height:2px;background-color:#82a8de;"></div>						
+						<h6 class="pt-2">Office Address:</h6>
+						<p> FF-2, Plot No-782, Niti Khand-1, Indirapuram, Ghaziabad, UP-201010</p>
+						<h6 class="pt-">Phone:<span style="font-weight:400;"> +91-8860608212</span></h6>
+						<h6 class="pt-">Email:<span style="font-weight:400;"> samtaksimmy@gmail.com</span></h6>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-12">
+								<h6 class="pt-2">Follow Us</h6>
+								<div style="width:50px; height:2px;background-color:#82a8de;"></div>						
+								<div class="pt-2">
+								<span>
+									<a href="http://www.facebook.com" target="_blank" title="facebook" class="hvr-icon-buzz-out"><i class="fa fa-facebook-square hvr-icon"></i></a>
+									<a href="http://www.twitter.com" target="_blank" title="twitter" class="hvr-icon-buzz-out"><i class="fa fa-twitter hvr-icon"></i></a>
+									<a href="http://www.linkedin.com" target="_blank" title="linkedin" class="hvr-icon-buzz-out"><i class="fa fa-linkedin hvr-icon"></i></a>
+								</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-12 col-12 quicklink">
+						<h6 class="pt-4">Quick Links</h6>
+						<div style="width:50px; height:2px;background-color:#82a8de;"></div>						
+						<ul class="pt-2">
+							<li><a href="index.html" class="hvr-skew-forward">Home</a></li>
+							<li><a href="skm_about.html" class="hvr-skew-forward">About Us</a></li>
+							<li><a href="skm_aboutfounder.html" class="hvr-skew-forward">About Founder</a></li>
+							<li><a href="secretarial_compliances.html" class="hvr-skew-forward">Areas of practice</a></li>
+							<li><a href="skm_contact.html" class="hvr-skew-forward">Contact Us</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-12 col-12 text-center">
+						<h6 class="pt-4">Find us on Google Map</h6>
+                 		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3501.5429190963846!2d77.35958781508283!3d28.643458232413472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sFF-2%2C+Plot+No-782%2C+Niti+Khand-1%2C+Indirapuram%2C+Ghaziabad%2C+UP-201010!5e0!3m2!1sen!2sin!4v1554897626211!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0" class="pt-2" allowfullscreen></iframe>
+					</div>
+					<div class="col-md-3 col-sm-12 col-12 text-center">
+						<h6 class="pt-4">Get in touch</h6>
+						<div style="padding-left:12px;padding-right:12px;">
+							<form class="form-horizontal pt-2" action="/action_page.php" style="margin-left:auto;margin-right:auto;">
+								<div class="row form-group">
+									<input type="email" class="form-control" id="email" placeholder="Your Name">
+								</div>
+								<div class="row form-group">
+									<input type="email" class="form-control" id="email" placeholder="Your Email">
+								</div>
+								<div class="row form-group">
+									<input type="email" class="form-control" id="email" placeholder="Phone Number">
+								</div>
+								
+								<div class="row form-group">
+									<textarea class="form-control" id="email" placeholder="Your Message Here"  rows="2"></textarea>
+								</div>
+								<div class="row form-group" id="cntbtn"align="center">
+									<div class="col-sm-12 col-xs-12">
+									<button type="email" class="btn btn-default hvr-ripple-out" style="color:#222;border:0;margin-left:-8px;">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-grey">
+						<p class="">This document is the property of Samta K Simmy & Associates, Company Secretaries* Firm and it provides the
+						general information about the firm, its people and its services offerings. Should you desire any further
+						information about us, please feel free to revert us at samtaksimmy@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer/-->
+		<!--footer-bottom-->
+		<div class="container-fluid footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="text-center">copyright © 2018-2019 SKM & Associates | Company Secretaries*</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-bottom-->
+		<a href="#myPage" class="back-top" id="toTop" title="to top"></a>
+	</body>	
+	<script src="js/aos.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script>
+		AOS.init({
+		  duration:1200,
+		   easing: 'ease-in'
+		})
+		$('.wel').hover(function () {
+		  $(this).addClass('magictime swashIn');
+		});
+		$(window).on('scroll',function () {
+			
+			if( $(window).scrollTop() > 200 ){
+				$('.back-top').fadeIn();
+			} else {
+				$('.back-top').fadeOut();
+			}
+		});
+	</script>
+</html>
